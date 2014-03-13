@@ -23,4 +23,8 @@ public  enum Sentiment {
         if (i < 0) return Sentiment.NEGATIVE;
         return Sentiment.NEUTRAL;
     }
+
+    public int getVal() {
+        return val;
+    }
 }

@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class SentimentComputeDomainServiceTest {
@@ -33,7 +35,16 @@ public class SentimentComputeDomainServiceTest {
         LOG.info("adjectives: " + report.getAdjectives());
         LOG.info("verbs: " + report.getVerbs());
         LOG.info("Named entities: " + report.getNamedEntities());
-        assertEquals(new Integer(2), report.getAggregateSentiment() );
+        assertEquals(new Integer(-5), report.getAggregateSentiment());
+
+        Integer sentence1sentiment = -1;
+        Integer sentence2sentiment = -1;
+        Integer sentence3sentiment = -3;
+        Integer expectedTotalSentiment = -5;
+
+        assertEquals(expectedTotalSentiment, report.getAggregateSentiment() );
+        assertEquals(Arrays.asList(sentence1sentiment, sentence2sentiment, sentence3sentiment), report.getSentenceSentiment() );
+
     }
 
 }

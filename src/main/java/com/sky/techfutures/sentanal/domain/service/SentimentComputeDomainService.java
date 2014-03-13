@@ -96,8 +96,8 @@ public class SentimentComputeDomainService {
         List<Integer> sentenceSentiment = new ArrayList<Integer>();
         Integer totalSentiment = 0;
         for (Sentiment sentiment : results) {
-            totalSentiment += sentiment.ordinal();
-            sentenceSentiment.add(sentiment.ordinal());
+            totalSentiment += sentiment.getVal();
+            sentenceSentiment.add(sentiment.getVal());
         }
 
 
@@ -106,10 +106,11 @@ public class SentimentComputeDomainService {
         Collection<String>  verbs = getVerbs(sentenceTree);
         Collection<String>  adjectives = getAdjectives(sentenceTree);
 
-        LOG.debug("submit() namedEntities='$namedEntities'");
-        LOG.debug("submit() nouns='$nouns'");
-        LOG.debug("submit() verbs='$verbs'");
-        LOG.debug("submit() adjectives='$adjectives'");
+        LOG.debug("analyse() totalSentiment: " + namedEntities );
+        LOG.debug("analyse() namedEntities: " + namedEntities );
+        LOG.debug("analyse() nouns: " + nouns );
+        LOG.debug("analyse() verbs: " + verbs);
+        LOG.debug("analyse() adjectives: " + adjectives);
 
 
         SentimentReport computedSentiment = new SentimentReport();
