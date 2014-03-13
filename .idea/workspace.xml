@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6256ad1-a023-4562-9771-177e4bcbc919" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/SentimentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/SentimentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentanal.yml" afterPath="$PROJECT_DIR$/sentanal.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start.sh" afterPath="$PROJECT_DIR$/start.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asky" afterPath="$PROJECT_DIR$/asky" />
     </list>
     <ignored path="sentanal.iws" />
     <ignored path=".idea/workspace.xml" />
