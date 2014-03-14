@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6256ad1-a023-4562-9771-177e4bcbc919" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/domain/model/Sentiment.java" afterPath="$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/domain/model/Sentiment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/domain/service/SentimentComputeDomainService.java" afterPath="$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/domain/service/SentimentComputeDomainService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/sky/techfutures/sentanal/domain/service/SentimentComputeDomainServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/sky/techfutures/sentanal/domain/service/SentimentComputeDomainServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sentanal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,10 +116,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/domain/model/Sentiment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="26" column="18" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-              <folding>
-                <element signature="e#586#587#0" expanded="true" />
-                <element signature="e#612#613#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -640,7 +635,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2159161" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35508022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35508022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -672,10 +667,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="22" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
           <folding>
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#269#270#0" expanded="false" />
+            <element signature="e#309#310#0" expanded="false" />
+            <element signature="e#341#342#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -709,7 +704,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="64" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -761,10 +756,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/domain/model/Sentiment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="18" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <folding>
-            <element signature="e#586#587#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>

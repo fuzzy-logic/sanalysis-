@@ -3,3 +3,4 @@
 
 
 curl -X POST http://localhost:9000/api/sentiment  -H "Content-Type: application/json"  -d "{\"text\": \"$1\"}"
+#curl -X POST http://prototype.cistechfutures.net:9000/api/sentiment  -H "Content-Type: application/json"  -d "{\"text\": \"$1\"}"
