@@ -30,7 +30,7 @@ public class SentimentService extends Service<SentimentConfiguration>   {
         final String serviceName = configuration.getServiceName();
 
         HttpConfiguration httpConfig = new HttpConfiguration();
-        httpConfig.setPort(8080);
+        httpConfig.setPort(9000);
         httpConfig.setAdminPort(8081);
         configuration.setHttpConfiguration(httpConfig);
 
