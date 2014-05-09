@@ -110,7 +110,7 @@ public class SentimentComputeDomainService {
         Collection<String>  verbs = getVerbs(sentenceTree);
         Collection<String>  adjectives = getAdjectives(sentenceTree);
 
-        LOG.info("analyse() totalSentiment: " + namedEntities );
+        LOG.info("analyse() totalSentiment: " + totalSentiment );
         LOG.info("analyse() namedEntities: " + namedEntities );
         LOG.info("analyse() nouns: " + nouns );
         LOG.info("analyse() verbs: " + verbs);

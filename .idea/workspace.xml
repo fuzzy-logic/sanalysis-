@@ -67,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SentimentComputeDomainService.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SentimentComputeDomainService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/domain/service/SentimentComputeDomainService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1523" max-vertical-offset="3675">
-              <caret line="97" column="53" selection-start-line="97" selection-start-column="53" selection-end-line="97" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.54275095" vertical-offset="1388" max-vertical-offset="3675">
+              <caret line="112" column="62" selection-start-line="112" selection-start-column="62" selection-end-line="112" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -107,10 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SentimentService.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SentimentService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/SentimentService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60966545" vertical-offset="47" max-vertical-offset="735">
+            <state vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="735">
               <caret line="32" column="31" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="31" />
               <folding />
             </state>
@@ -164,8 +164,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="412" />
-    <option name="y" value="102" />
+    <option name="x" value="305" />
+    <option name="y" value="100" />
     <option name="width" value="1621" />
     <option name="height" value="1004" />
   </component>
@@ -637,10 +637,15 @@
       <created>1394712428701</created>
       <updated>1394712428701</updated>
     </task>
+    <task id="LOCAL-00001" summary="added extra logging to debug perfornamce issues">
+      <created>1399650018951</created>
+      <updated>1399650018951</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="412" y="102" width="1621" height="1004" extended-state="0" />
+    <frame x="305" y="100" width="1621" height="1004" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -683,6 +688,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="added extra logging to debug perfornamce issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="added extra logging to debug perfornamce issues" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -916,18 +923,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/domain/service/SentimentComputeDomainService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/SentimentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1523" max-vertical-offset="3675">
-          <caret line="97" column="53" selection-start-line="97" selection-start-column="53" selection-end-line="97" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="735">
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/SentimentService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/domain/service/SentimentComputeDomainService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60966545" vertical-offset="47" max-vertical-offset="735">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.54275095" vertical-offset="1388" max-vertical-offset="3675">
+          <caret line="112" column="62" selection-start-line="112" selection-start-column="62" selection-end-line="112" selection-end-column="62" />
           <folding />
         </state>
       </provider>
