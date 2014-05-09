@@ -79,19 +79,23 @@ public class SentimentComputeDomainService {
 
         Annotation document = new Annotation(text);
 
+        LOG.info("sharedPipeline.annotate(document)");
         // run all Annotators on this text
         sharedPipeline.annotate(document);
 
         // these are all the sentences in this document
         // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
+        LOG.info("Creating sentence tree object...");
         List<CoreMap> sentenceTree = document.get(CoreAnnotations.SentencesAnnotation.class);
 
+        LOG.info("generating sentence tree...");
         Collection<String> standfordNlpSentiments = new ArrayList<String>();
         for (CoreMap sentence : sentenceTree) {
             //Tree tree = sentence.get(SentimentCoreAnnotations.AnnotatedTree.class);
             String result = sentence.get(SentimentCoreAnnotations.ClassName.class);
             standfordNlpSentiments.add(result);
         }
+        LOG.info("generating sentence sentiment...");
         List<Sentiment> results  = convertSentiment(standfordNlpSentiments);
         List<Integer> sentenceSentiment = new ArrayList<Integer>();
         Integer totalSentiment = 0;
@@ -106,11 +110,11 @@ public class SentimentComputeDomainService {
         Collection<String>  verbs = getVerbs(sentenceTree);
         Collection<String>  adjectives = getAdjectives(sentenceTree);
 
-        LOG.debug("analyse() totalSentiment: " + namedEntities );
-        LOG.debug("analyse() namedEntities: " + namedEntities );
-        LOG.debug("analyse() nouns: " + nouns );
-        LOG.debug("analyse() verbs: " + verbs);
-        LOG.debug("analyse() adjectives: " + adjectives);
+        LOG.info("analyse() totalSentiment: " + namedEntities );
+        LOG.info("analyse() namedEntities: " + namedEntities );
+        LOG.info("analyse() nouns: " + nouns );
+        LOG.info("analyse() verbs: " + verbs);
+        LOG.info("analyse() adjectives: " + adjectives);
 
 
         SentimentReport computedSentiment = new SentimentReport();
