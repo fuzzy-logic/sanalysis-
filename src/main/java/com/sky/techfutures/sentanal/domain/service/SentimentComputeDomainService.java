@@ -62,15 +62,11 @@ WRB Wh­adverb
 
 public class SentimentComputeDomainService {
 
+
     static final Logger LOG = LoggerFactory.getLogger(SentimentComputeDomainService.class);
 
-    StanfordCoreNLP sharedPipeline = new StanfordCoreNLP(getProps());
 
-    static Properties getProps() {
-        java.util.Properties p = new Properties();
-        p.put("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref, sentiment");
-        return p;
-    }
+    NlpSimplePool pipelinePool = new NlpSimplePool();
 
 
     public SentimentReport analyse(String text) {
@@ -81,7 +77,7 @@ public class SentimentComputeDomainService {
 
         LOG.info("sharedPipeline.annotate(document)");
         // run all Annotators on this text
-        sharedPipeline.annotate(document);
+        pipelinePool.get().annotate(document);
 
         // these are all the sentences in this document
         // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
@@ -118,6 +114,7 @@ public class SentimentComputeDomainService {
 
 
         SentimentReport computedSentiment = new SentimentReport();
+        computedSentiment.setText("SUBSTRING 0-100: " + text.substring(0, 100));
         computedSentiment.setSentenceSentiment(sentenceSentiment);
         computedSentiment.setAggregateSentiment(totalSentiment);
         if (! namedEntities.isEmpty()) computedSentiment.setNamedEntities(namedEntities);
