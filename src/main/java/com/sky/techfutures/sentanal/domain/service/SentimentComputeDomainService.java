@@ -114,7 +114,7 @@ public class SentimentComputeDomainService {
 
 
         SentimentReport computedSentiment = new SentimentReport();
-        computedSentiment.setText("SUBSTRING 0-100: " + text.substring(0, 100));
+        if (text.length() > 100) computedSentiment.setText("SUBSTRING 0-100: " + text.substring(0, 100));
         computedSentiment.setSentenceSentiment(sentenceSentiment);
         computedSentiment.setAggregateSentiment(totalSentiment);
         if (! namedEntities.isEmpty()) computedSentiment.setNamedEntities(namedEntities);
