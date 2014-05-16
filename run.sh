@@ -1,9 +1,11 @@
 #!/bin/sh
 
 echo "mvn clean: cleaning project..."
-mvn clean
+mvn clean > /spaas/mvn.log
+cat  /spaas/mvn.log
 echo "mvn package: building project..."
-mvn package
+mvn package > /spaas/mvn.log
+cat  /spaas/mvn.log
 echo
 echo "****************************************************************************"
 echo "running sentanal server"
