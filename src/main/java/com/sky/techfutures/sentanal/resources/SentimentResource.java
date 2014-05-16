@@ -37,7 +37,7 @@ public class SentimentResource {
             //long totalTime = endTime - startTime;
             //long printTime = new TimeUnit().convert(totalTime, TimeUnit.MILLISECONDS);
             stopwatch.stop();
-            LOG.info("Computed sentiment in " + stopwatch.elapsedMillis() + "ms for input text '" + logFriendlyString + "'");
+            LOG.info("Computed aggregate sentiment of " + sentimentReport.getAggregateSentiment() + " in " + stopwatch.elapsedMillis() + "ms for input text '" + logFriendlyString + "'");
             return sentimentReport;
 
         } catch (Exception e) {
