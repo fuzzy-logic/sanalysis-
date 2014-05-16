@@ -3,6 +3,7 @@ package com.sky.techfutures.sentanal.domain.service;
 import com.sky.techfutures.sentanal.api.SentimentReport;
 import com.sky.techfutures.sentanal.domain.model.PosTags;
 import com.sky.techfutures.sentanal.domain.model.Sentiment;
+import com.sky.techfutures.sentanal.utils.StringUtils;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.util.CoreMap;
@@ -71,27 +72,27 @@ public class SentimentComputeDomainService {
 
     public SentimentReport analyse(String text) {
 
-
+        text = StringUtils.stripForAnalysis(text);
 
         Annotation document = new Annotation(text);
 
-        LOG.info("sharedPipeline.annotate(document)");
+        //LOG.info("sharedPipeline.annotate(document)");
         // run all Annotators on this text
         pipelinePool.get().annotate(document);
 
         // these are all the sentences in this document
         // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
-        LOG.info("Creating sentence tree object...");
+        //LOG.info("Creating sentence tree object...");
         List<CoreMap> sentenceTree = document.get(CoreAnnotations.SentencesAnnotation.class);
 
-        LOG.info("generating sentence tree...");
+        //LOG.info("generating sentence tree...");
         Collection<String> standfordNlpSentiments = new ArrayList<String>();
         for (CoreMap sentence : sentenceTree) {
             //Tree tree = sentence.get(SentimentCoreAnnotations.AnnotatedTree.class);
             String result = sentence.get(SentimentCoreAnnotations.ClassName.class);
             standfordNlpSentiments.add(result);
         }
-        LOG.info("generating sentence sentiment...");
+        //LOG.info("generating sentence sentiment...");
         List<Sentiment> results  = convertSentiment(standfordNlpSentiments);
         List<Integer> sentenceSentiment = new ArrayList<Integer>();
         Integer totalSentiment = 0;
@@ -106,15 +107,15 @@ public class SentimentComputeDomainService {
         Collection<String>  verbs = getVerbs(sentenceTree);
         Collection<String>  adjectives = getAdjectives(sentenceTree);
 
-        LOG.info("analyse() totalSentiment: " + totalSentiment );
-        LOG.info("analyse() namedEntities: " + namedEntities );
-        LOG.info("analyse() nouns: " + nouns );
-        LOG.info("analyse() verbs: " + verbs);
-        LOG.info("analyse() adjectives: " + adjectives);
+        //LOG.info("analyse() totalSentiment: " + totalSentiment );
+        //LOG.info("analyse() namedEntities: " + namedEntities );
+        //LOG.info("analyse() nouns: " + nouns );
+        //LOG.info("analyse() verbs: " + verbs);
+        //LOG.info("analyse() adjectives: " + adjectives);
 
 
         SentimentReport computedSentiment = new SentimentReport();
-        if (text.length() > 100) computedSentiment.setText("SUBSTRING 0-100: " + text.substring(0, 100));
+        if (text.length() > 100) computedSentiment.setText(text.substring(0, 100)+  ".....");
         computedSentiment.setSentenceSentiment(sentenceSentiment);
         computedSentiment.setAggregateSentiment(totalSentiment);
         if (! namedEntities.isEmpty()) computedSentiment.setNamedEntities(namedEntities);
