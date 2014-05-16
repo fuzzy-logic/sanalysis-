@@ -5,6 +5,14 @@ mvn clean > /spaas/mvn.log
 cat  /spaas/mvn.log
 echo "mvn package: building project..."
 mvn package > /spaas/mvn.log
+if [ "$?" == 0 ]
+then 
+  echo build run ok
+  ls -al target/
+else 
+  echo "build failed :-("
+fi
+
 #at  /spaas/mvn.log
 echo
 echo "****************************************************************************"
