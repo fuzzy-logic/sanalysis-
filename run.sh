@@ -5,7 +5,7 @@ mvn clean > /spaas/mvn.log
 cat  /spaas/mvn.log
 echo "mvn package: building project..."
 mvn package > /spaas/mvn.log
-cat  /spaas/mvn.log
+#at  /spaas/mvn.log
 echo
 echo "****************************************************************************"
 echo "running sentanal server"
