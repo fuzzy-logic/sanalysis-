@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 public class AsyncMasterRequestHandlerTest {
 
     @Test
-    public void testSentimentRequestHandler() {
+    public void testSentimentRequestHandlerAsync() {
 
         Command<String, String> command = new Command<String, String>() {
             public String execute(String input) {
@@ -61,15 +61,40 @@ public class AsyncMasterRequestHandlerTest {
 
     }
 
+    @Test
+    public void testSentimentRequestHandlerSync() {
 
-    private void sleep() {
+        Command<String, String> command = new Command<String, String>() {
+            public String execute(String input) {
+                //System.out.println("Command processing " + input);
+                return input + "_processed_by_command";
+            }
+        };
 
-        try {
-            Thread.sleep(100);
-        } catch (Exception e) {
+        final AsyncMasterRequestHandler handler = new AsyncMasterRequestHandler(command);
 
-        }
+
+
+        Object res1 = handler.processRequest("hello1!");
+        Object res2 = handler.processRequest("hello2!");
+        Object res3 = handler.processRequest("hello3!");
+
+
+        assertTrue(res1.toString().startsWith("hello1"));
+        assertTrue(res1.toString().endsWith("_processed_by_command"));
+
+        assertTrue(res2.toString().startsWith("hello2"));
+        assertTrue(res2.toString().endsWith("_processed_by_command"));
+
+        assertTrue(res3.toString().startsWith("hello3"));
+        assertTrue(res3.toString().endsWith("_processed_by_command"));
+
+
+
 
     }
+
+
+
 
 }
