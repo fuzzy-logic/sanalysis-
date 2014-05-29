@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6256ad1-a023-4562-9771-177e4bcbc919" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/sky/techfutures/sentanal/async/AsyncMasterRequestHandlerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/sky/techfutures/sentanal/async/AsyncMasterRequestHandlerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/async/AsyncMasterRequestHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/async/AsyncMasterRequestHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sentanal.iws" />
@@ -72,8 +72,8 @@
       <file leaf-file-name="AsyncMasterRequestHandlerTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/sky/techfutures/sentanal/async/AsyncMasterRequestHandlerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64420485" vertical-offset="767" max-vertical-offset="1590">
-              <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.2972973" vertical-offset="255" max-vertical-offset="1590">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#382#612#0" expanded="true" />
@@ -137,8 +137,8 @@
       <file leaf-file-name="AsyncMasterRequestHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/async/AsyncMasterRequestHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="1260">
-              <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
+              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#466#475#0" expanded="true" />
@@ -404,10 +404,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="240" />
-    <option name="y" value="35" />
-    <option name="width" value="2203" />
-    <option name="height" value="1273" />
+    <option name="x" value="73" />
+    <option name="y" value="22" />
+    <option name="width" value="1564" />
+    <option name="height" value="1109" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -757,7 +757,7 @@
       <recent name="com.sky.techfutures.sentanal.async" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AsyncMasterRequestHandlerTest.testSentimentRequestHandlerSync">
+  <component name="RunManager" selected="JUnit.AsyncMasterRequestHandlerTest">
     <configuration default="false" name="SentimentComputeDomainServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sentanal" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -979,10 +979,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.AsyncMasterRequestHandlerTest.testSentimentRequestHandlerSync" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SentimentAbstractWorkerTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.AsyncMasterRequestHandlerTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SentimentComputeDomainServiceTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AsyncMasterRequestHandlerTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SentimentComputeDomainServiceTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.AsyncMasterRequestHandlerTest.testSentimentRequestHandlerSync" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SentimentAbstractWorkerTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.SentimentAbstractWorkerTest.testSentimentWorker" />
       </list>
     </recent_temporary>
@@ -1021,7 +1021,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="240" y="35" width="2203" height="1273" extended-state="0" />
+    <frame x="73" y="22" width="1564" height="1109" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1035,14 +1035,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32853514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284169" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17866811" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20869967" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34801015" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29632062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4041298" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1097,7 +1097,8 @@
     <MESSAGE value="added simple reosurce pool to help with memeory overloads" />
     <MESSAGE value="fixed index out of bounds exception" />
     <MESSAGE value="added async master/worker pattern via queue" />
-    <option name="LAST_COMMIT_MESSAGE" value="added async master/worker pattern via queue" />
+    <MESSAGE value="added sychronous test for async stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sychronous test for async stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1486,8 +1487,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sky/techfutures/sentanal/async/AsyncMasterRequestHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="1260">
-          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#466#475#0" expanded="true" />
@@ -1498,8 +1499,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/sky/techfutures/sentanal/async/AsyncMasterRequestHandlerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64420485" vertical-offset="767" max-vertical-offset="1590">
-          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.2972973" vertical-offset="255" max-vertical-offset="1590">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#382#612#0" expanded="true" />

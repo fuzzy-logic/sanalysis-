@@ -38,7 +38,7 @@ public class AsyncMasterRequestHandler {
         Request request = new Request(in);
         workq.add(request);
         waitForResponse(request);
-        Response response =  responseMap.get(request.id);
+        Response response =  responseMap.remove(request.id);
         if (response == null) {
                return null;
         } else {
