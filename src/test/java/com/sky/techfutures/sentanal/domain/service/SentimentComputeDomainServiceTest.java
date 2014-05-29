@@ -16,6 +16,8 @@ public class SentimentComputeDomainServiceTest {
 
     static final Logger LOG = LoggerFactory.getLogger(SentimentComputeDomainServiceTest.class);
 
+    final String testText = "A green baby caterpillar hatches from an egg, and from birth he experiences a perpetual craving for food. He eats through fruits on five days, one piece on the first, two on the second, and so on up to five, then experiments with a wider variety of foods. Soon enough he overdoes it and nauseates himself. After recovering he spins a cocoon in which he remains for the following two weeks. Later, the caterpillar emerges as a bright, colorful butterfly with large, gorgeous, multi-colored wings.";
+
     SentimentComputeDomainService  sentimentComputeDomainService;
 
     @Before
@@ -28,22 +30,23 @@ public class SentimentComputeDomainServiceTest {
     @Test
     public void testComputeSentiment() throws Exception {
         LOG.info("running test testComputeSentiment()");
-        SentimentReport report = sentimentComputeDomainService.analyse("The film was neither witty not funny. In fact I believe it was the worst film I've ever seen. The acting was terrible, the plot was dull and the photography was uninspiring.");
+        SentimentReport report = sentimentComputeDomainService.analyse(testText);
         LOG.info("overall sentiment: " + report.getAggregateSentiment());
         LOG.info("per sentence sentiment: " + report.getSentenceSentiment());
         LOG.info("nouns: " + report.getNouns());
         LOG.info("adjectives: " + report.getAdjectives());
         LOG.info("verbs: " + report.getVerbs());
         LOG.info("Named entities: " + report.getNamedEntities());
-        assertEquals(new Integer(-5), report.getAggregateSentiment());
 
         Integer sentence1sentiment = -1;
-        Integer sentence2sentiment = -1;
-        Integer sentence3sentiment = -3;
-        Integer expectedTotalSentiment = -5;
+        Integer sentence2sentiment = 1;
+        Integer sentence3sentiment = 1;
+        Integer sentence4sentiment = -1;
+        Integer sentence5sentiment = 1;
+        Integer expectedTotalSentiment = 1;
 
         assertEquals(expectedTotalSentiment, report.getAggregateSentiment() );
-        assertEquals(Arrays.asList(sentence1sentiment, sentence2sentiment, sentence3sentiment), report.getSentenceSentiment() );
+        assertEquals(Arrays.asList(sentence1sentiment, sentence2sentiment, sentence3sentiment, sentence4sentiment, sentence5sentiment), report.getSentenceSentiment() );
 
     }
 

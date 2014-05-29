@@ -25,6 +25,9 @@
         <module name="sentanal" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sentanal" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

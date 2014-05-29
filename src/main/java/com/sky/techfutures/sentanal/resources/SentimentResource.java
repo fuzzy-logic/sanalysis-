@@ -3,17 +3,16 @@ package com.sky.techfutures.sentanal.resources;
 import com.google.common.base.Stopwatch;
 import com.sky.techfutures.sentanal.api.InputText;
 import com.sky.techfutures.sentanal.api.SentimentReport;
+import com.sky.techfutures.sentanal.async.AsyncMasterRequestHandler;
+import com.sky.techfutures.sentanal.async.Command;
 import com.sky.techfutures.sentanal.domain.service.SentimentComputeDomainService;
 import com.yammer.metrics.annotation.Timed;
-import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.util.Arrays;
-import java.util.concurrent.TimeUnit;
 
 
 @Path("/api/sentiment")
@@ -24,6 +23,15 @@ public class SentimentResource {
     static final Logger LOG = LoggerFactory.getLogger(SentimentResource.class);
     SentimentComputeDomainService sentimentComputeDomainService = new SentimentComputeDomainService();
 
+
+    Command<String, SentimentReport> command = new Command<String, SentimentReport>() {
+        public SentimentReport execute(String input) {
+            return sentimentComputeDomainService.analyse(input);
+        }
+    };
+
+    final AsyncMasterRequestHandler handler = new AsyncMasterRequestHandler(command);
+
     @POST
     @Timed
     public SentimentReport computeSentiment( @Valid InputText inputText) {
@@ -32,7 +40,10 @@ public class SentimentResource {
         stopwatch.start();
         try {
             //long startTime = System.nanoTime();
-            SentimentReport sentimentReport = sentimentComputeDomainService.analyse(inputText.getText());
+
+
+            SentimentReport sentimentReport = (SentimentReport) handler.processRequest(inputText.getText());
+
             //long endTime = System.nanoTime();
             //long totalTime = endTime - startTime;
             //long printTime = new TimeUnit().convert(totalTime, TimeUnit.MILLISECONDS);
