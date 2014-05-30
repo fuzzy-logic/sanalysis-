@@ -2,6 +2,8 @@ package com.sky.techfutures.sentanal.async;
 
 import com.sky.techfutures.sentanal.api.SentimentReport;
 import com.sky.techfutures.sentanal.domain.service.SentimentAnalysis;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Deque;
 import java.util.Map;
@@ -10,6 +12,8 @@ import java.util.Map;
  * Created by gawain on 29/05/2014.
  */
 public class AsyncWorker implements Runnable {
+
+    static final Logger LOG = LoggerFactory.getLogger(AsyncWorker.class);
 
     Command command;
     Deque<Request> workQueue;
@@ -42,6 +46,7 @@ public class AsyncWorker implements Runnable {
             Object input = request.getRequest();
             Object output =  command.execute(input);
             Response response = new Response(request, output);
+            LOG.trace("AsyncWorker" + myId + " finished task " + request.id );
             finishedQueue.put(request.id, response);
             sleep();
         }

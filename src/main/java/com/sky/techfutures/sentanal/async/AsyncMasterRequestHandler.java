@@ -3,6 +3,8 @@ package com.sky.techfutures.sentanal.async;
 import com.sky.techfutures.sentanal.api.SentimentReport;
 import com.sky.techfutures.sentanal.domain.service.SentimentAnalysis;
 import com.sky.techfutures.sentanal.domain.service.SentimentComputeDomainService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedDeque;
@@ -12,6 +14,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
  */
 public class AsyncMasterRequestHandler {
 
+    static final Logger LOG = LoggerFactory.getLogger(AsyncMasterRequestHandler.class);
 
     Deque<Request> workq = new ConcurrentLinkedDeque<Request>();
     Queue<Response> finishq = new ConcurrentLinkedDeque<Response>();
@@ -26,7 +29,7 @@ public class AsyncMasterRequestHandler {
     }
 
     private void createWorkers() {
-        for (int i = 0 ; i < 4 ; i++) {
+        for (int i = 0 ; i < 8 ; i++) {
             Runnable worker = new AsyncWorker(i, command, workq, responseMap);
             Thread thread = new Thread(worker);
             thread.start();

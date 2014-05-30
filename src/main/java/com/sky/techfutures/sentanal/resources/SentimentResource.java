@@ -30,7 +30,7 @@ public class SentimentResource {
         }
     };
 
-    final AsyncMasterRequestHandler handler = new AsyncMasterRequestHandler(command);
+    //final AsyncMasterRequestHandler asyncHandler = new AsyncMasterRequestHandler(command);
 
     @POST
     @Timed
@@ -42,7 +42,9 @@ public class SentimentResource {
             //long startTime = System.nanoTime();
 
 
-            SentimentReport sentimentReport = (SentimentReport) handler.processRequest(inputText.getText());
+            //SentimentReport sentimentReport = (SentimentReport) asyncHandler.processRequest(inputText.getText());
+
+            SentimentReport sentimentReport = sentimentComputeDomainService.analyse(inputText.getText());
 
             //long endTime = System.nanoTime();
             //long totalTime = endTime - startTime;
