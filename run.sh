@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 echo "mvn clean: cleaning project..."
 mvn clean > /spaas/mvn.log
 cat  /spaas/mvn.log
@@ -20,5 +21,5 @@ echo "**************************************************************************
 echo "running sentanal server"
 echo "****************************************************************************"
 echo
-java -Xms512m -Xmx7800m -XX:PermSize=512m -jar target/sentanal-1.0-SNAPSHOT.jar server sentanal.yml
+java -Xms2048m -Xmx14000m -XX:PermSize=1024m -jar target/sentanal-1.0-SNAPSHOT.jar server sentanal.yml
 

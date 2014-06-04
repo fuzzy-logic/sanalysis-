@@ -1,6 +1,12 @@
 #!/bin/sh
 
 
+ARG=$1
 
-curl -X POST http://localhost:9000/api/sentiment  -H "Content-Type: application/json"  -d "{\"text\": \"$1\"}"
+if [ -z "$1" ]
+then
+  ARG="A green baby caterpillar hatches from an egg, and from birth he experiences a perpetual craving for food. He eats through fruits on five days, one piece on the first, two on the second, and so on up to five, then experiments with a wider variety of foods. Soon enough he overdoes it and nauseates himself. After recovering he spins a cocoon in which he remains for the following two weeks. Later, the caterpillar emerges as a bright, colorful butterfly with large, gorgeous, multi-colored wings."
+fi
+echo $ARG
+curl -X POST http://localhost:9000/api/sentiment  -H "Content-Type: application/json"  -d "{\"text\": \"$ARG\"}"
 #curl -X POST http://prototype.cistechfutures.net:9000/api/sentiment  -H "Content-Type: application/json"  -d "{\"text\": \"$1\"}"
