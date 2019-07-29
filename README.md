@@ -1,4 +1,4 @@
-sentanal
+sentiment analysis
 ========
 
 
@@ -15,4 +15,4 @@ Start Server
 
 Test
 ========
-./asky "The rain in spain falls main on the plain"
+./asky "The rain in spain falls mainly on the plain"
